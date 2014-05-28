@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+            "file_exclude_patterns": [
+                ".gitignore",
+                "*.sublime-workspace",
+                ".editorconfig",
+                "*.orig"
+            ],
+            "folder_exclude_patterns": [
+                "node_modules",
+                "bin"
+            ],
+            "name": "MongoTools",
+			"path": "."
+		}
+	]
+}
