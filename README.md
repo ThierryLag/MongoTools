@@ -3,15 +3,24 @@
 MongoTools is a little shell script that provide command line interface to
 manage Mongo documents.
 
-With a simple command, you can import, export, clean a Mongo database.
-
-You can use this script directly in you shell or add it to grunt or git-hooks.
+With a simple command, you can import, export, clean a Mongo database.  
+Use this script directly in you shell or add it to grunt or git-hooks.
 
 ## Installation
 
-You can clone the repo or directly download the script at :
+You can download the script from [Github](https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh) :
 
-    @TODO : add github URL to raw script.
+* With CURL :
+
+	    curl -s https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh -o mongotools.sh
+
+* With WGET : 
+
+		wget https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh
+		
+_Make sure the script is executable:_  
+
+		chmod a+x mongotools.sh
 
 ## Settings
 
@@ -23,31 +32,29 @@ Edit the variables below at the beginning of the script :
 
 ## Usage
 
-* Export Mongo document :
-
-        ./mongotools.sh export
-
-* Display this usage message :
-        ./mongotools.sh [-h]
-
-* Display script version :
-
-        ./mongotools.sh [-v | --version]
-
-* Make actions on MongoDB :
+* **Make actions on MongoDB** :
 
         ./mongotools.sh [-o] (actions list)
 
-    Execute each action :
-        export: export database collection in JSON
-        import: import collection from JSON
-        clear: remove all collections from database
+    Execute each listed action in order you want:
+    
+    * export: export database collection in JSON
+    * import: import collection from JSON
+    * clear: remove all collections from database
 
-    Example: `./mongotools.sh export clear import` :
-        Export collections, then clear DB and finally re-import !
+    Example: `./mongotools.sh export clear import` :  
+    export collections, then clear DB and finally re-import !
 
+* **Display usage message** :
+
+        ./mongotools.sh [-h]
+
+* **Display script version** :
+
+        ./mongotools.sh [-v | --version]
+        
 ## License
 
-BashTools is free and unencumbered public domain software.
+BashTools is free and unencumbered public domain software.  
 For more information, see <http://unlicense.org/> or the accompanying LICENSE file.
 
