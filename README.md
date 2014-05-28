@@ -9,9 +9,19 @@ You can use this script directly in you shell or add it to grunt or git-hooks.
 
 ## Installation
 
-You can clone the repo or directly download the script at :
+You can download the script from [Github](https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh) :
 
-    @TODO : add github URL to raw script.
+* With CURL :
+
+	    curl -s https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh -o mongotools.sh
+
+* With WGET : 
+
+		wget https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh
+		
+_Make sure the script is executable:_  
+
+		chmod a+x mongotools.sh
 
 ## Settings
 
