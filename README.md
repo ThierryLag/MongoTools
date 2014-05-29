@@ -1,5 +1,7 @@
 # MongoTools
 
+> **Warning !** Work in progress. This package isn't ready for production.
+
 MongoTools is a little shell script that provide command line interface to
 manage Mongo documents.
 

@@ -1,15 +1,13 @@
 {
   "name": "MongoTools",
-  "version": "0.1.0",
-  "private": true,
-  "description": "MongoTools provide simple command line interface to import/export/clear Mongo documents.",
+  "version": "0.0.1",
+  "description": "Work In Progress - MongoTools will provide simple command line interface to import/export/clear Mongo documents.",
   "keywords": [
     "mongodb",
     "cli",
     "shell",
     "tools"
   ],
-  "main": "bin/mongotools.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ThierryLag/MongoTools.git"
@@ -18,10 +16,17 @@
     "name": "Thierry 'Akarun' Lagasse",
     "email": "thierry@passtech.be",
     "url": "http://passtech.be"
-  },	
+  },
   "license": "UNLICENSE",
   "bugs": {
     "url": "https://github.com/ThierryLag/MongoTools/issues"
   },
-  "homepage": "https://github.com/ThierryLag/MongoTools"
+  "homepage": "https://github.com/ThierryLag/MongoTools",
+  "dependencies": {
+    "commander": "2.2"
+  },
+  "main": "bin/mongotools.js",
+  "bin": {
+    "mongotools" : "bin/mongotools.js"
+  }
 }
