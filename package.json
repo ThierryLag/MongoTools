@@ -1,5 +1,5 @@
 {
-  "name": "MongoTools",
+  "name": "mongotools",
   "version": "0.0.1",
   "description": "Work In Progress - MongoTools will provide simple command line interface to import/export/clear Mongo documents.",
   "keywords": [
