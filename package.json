@@ -4,6 +4,7 @@
   "description": "Work In Progress - MongoTools will provide simple command line interface to import/export/clear Mongo documents.",
   "keywords": [
     "mongodb",
+    "mongo",
     "cli",
     "shell",
     "tools"
@@ -23,7 +24,7 @@
   },
   "homepage": "https://github.com/ThierryLag/MongoTools",
   "dependencies": {
-    "commander": "2.2"
+    "commander": "~2.2"
   },
   "main": "bin/mongotools.js",
   "bin": {

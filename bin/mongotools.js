@@ -3,19 +3,20 @@
 /*
  * MongoTools
  *
- * Copyright (c) 2014 Thierry 'Akarun' Lagasse
+ * Copyright (c) 2014 Thierry 'Akarun' Lagasse for KRKN
  * Unlicensed.
 */
 
 "use strict";
 
-var settings = require( '../package.json' );
+var settings = require( '../package.json' ).mongotools;
 var program = require( 'commander' );
 
 program
     .version( settings.version )
     .option( '-i, --input [path]', 'Import datas from this folder.', './' )
     .option( '-o, --output [path]', 'Output folder where export datas.', './' )
+    .option( '-d, --db [connection]', 'DB connexion parameters.', '' )
     .parse( process.argv );
 
 // ----------------------------------------------------------------------------

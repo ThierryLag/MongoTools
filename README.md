@@ -5,55 +5,50 @@
 MongoTools is a little shell script that provide command line interface to
 manage Mongo documents.
 
-With a simple command, you can import, export, clean a Mongo database.  
+These features are based on Mongo command line tools : mongoexport, mongoimport, ...  
+With a simple command, you can :
+
+* **Import** documents from JSON file
+* **Export** documents to JSON file
+* **Clean** documents by removing the content  
+
 Use this script directly in you shell or add it to grunt or git-hooks.
 
 ## Installation
 
-You can download the script from [Github](https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh) :
+You can install "MongoTools" globally : 
 
-* With CURL :
+    npm install -g mongotools
 
-	    curl -s https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh -o mongotools.sh
+Or locally : 
 
-* With WGET : 
+    npm install mongotools --save-dev
+    ln -s node_modules/.bin/mongotools .
 
-		wget https://raw.githubusercontent.com/ThierryLag/MongoTools/bash-version/mongotools.sh
-		
-_Make sure the script is executable:_  
-
-		chmod a+x mongotools.sh
+_This second line create a symbolic link in your application root directory for MongoTools shell script._
 
 ## Settings
 
-Edit the variables below at the beginning of the script :
+You can pass parameters to script (see below).
 
-* `DB_NAME='your-mongo-db'` : name of you mongo database
-* `DB_COLLECTIONS=( 'your-documents' 'another' )` : array of documents to import/export/clear
-* `DATAS_PATH='./_datas'` : path where the script store the datas.
+Otherwise the script try to find information from `package.json` of your app. 
+
+    "mongotools": {
+        "db": "dbname",
+        "collections": [
+            "documents",
+            "you",
+            "want",
+            "export/import/clear"
+        ],
+        "path": "./_datas/"
+    }
+
+_But, you can override these parametres via command line._
 
 ## Usage
 
-* **Make actions on MongoDB** :
-
-        ./mongotools.sh [-o] (actions list)
-
-    Execute each listed action in order you want:
-    
-    * export: export database collection in JSON
-    * import: import collection from JSON
-    * clear: remove all collections from database
-
-    Example: `./mongotools.sh export clear import` :  
-    export collections, then clear DB and finally re-import !
-
-* **Display usage message** :
-
-        ./mongotools.sh [-h]
-
-* **Display script version** :
-
-        ./mongotools.sh [-v | --version]
+@TODO
         
 ## License
 
